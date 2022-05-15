@@ -54,22 +54,22 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5k-WF-a4f">
                                 <rect key="frame" x="40" y="220" width="334" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RAo-Er-MVF">
                                 <rect key="frame" x="40" y="315" width="334" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oNs-ij-IlJ">
                                 <rect key="frame" x="40" y="410" width="334" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="itL-KF-jJE">
                                 <rect key="frame" x="40" y="505" width="334" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="15B-tj-nRW"/>
@@ -102,6 +102,12 @@
                             <constraint firstItem="itL-KF-jJE" firstAttribute="leading" secondItem="kgY-hg-riZ" secondAttribute="leading" id="vLQ-ja-wax"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputPushUpTextField" destination="b5k-WF-a4f" id="r6B-vo-hAu"/>
+                        <outlet property="inputRunningTextField" destination="itL-KF-jJE" id="bqp-Xn-Uzx"/>
+                        <outlet property="inputSitUpTextField" destination="RAo-Er-MVF" id="FVh-Lc-bh7"/>
+                        <outlet property="inputSquatTextField" destination="oNs-ij-IlJ" id="wKN-Va-I3k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0V-Oi-24d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
