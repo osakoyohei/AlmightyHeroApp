@@ -17,6 +17,7 @@
 		27226F72282F31BC00DC02FD /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27226F71282F31BC00DC02FD /* MainTabBarController.swift */; };
 		27226F76282F335900DC02FD /* ViewController.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27226F75282F335900DC02FD /* ViewController.swift.swift */; };
 		27226F7B282F33B400DC02FD /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27226F7A282F33B400DC02FD /* CalendarViewController.swift */; };
+		8188020102999BF6F55EB50E /* Pods_AlmightyHeroApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF5528F857AF1A39E49E527 /* Pods_AlmightyHeroApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,9 @@
 		27226F71282F31BC00DC02FD /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		27226F75282F335900DC02FD /* ViewController.swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift.swift; sourceTree = "<group>"; };
 		27226F7A282F33B400DC02FD /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		B449F4777526AB3C12CE37BA /* Pods-AlmightyHeroApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlmightyHeroApp.debug.xcconfig"; path = "Target Support Files/Pods-AlmightyHeroApp/Pods-AlmightyHeroApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D22E36656C399551F60E316F /* Pods-AlmightyHeroApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlmightyHeroApp.release.xcconfig"; path = "Target Support Files/Pods-AlmightyHeroApp/Pods-AlmightyHeroApp.release.xcconfig"; sourceTree = "<group>"; };
+		FEF5528F857AF1A39E49E527 /* Pods_AlmightyHeroApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlmightyHeroApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8188020102999BF6F55EB50E /* Pods_AlmightyHeroApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		181C05F8CCE213B5088B5618 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEF5528F857AF1A39E49E527 /* Pods_AlmightyHeroApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		27226F3F282F246D00DC02FD = {
 			isa = PBXGroup;
 			children = (
 				27226F4A282F246D00DC02FD /* AlmightyHeroApp */,
 				27226F49282F246D00DC02FD /* Products */,
+				73D918345323FAE4D0E61B5C /* Pods */,
+				181C05F8CCE213B5088B5618 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +134,16 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		73D918345323FAE4D0E61B5C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B449F4777526AB3C12CE37BA /* Pods-AlmightyHeroApp.debug.xcconfig */,
+				D22E36656C399551F60E316F /* Pods-AlmightyHeroApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27226F5C282F246F00DC02FD /* Build configuration list for PBXNativeTarget "AlmightyHeroApp" */;
 			buildPhases = (
+				D25A6BEDFA352786A0D02FD8 /* [CP] Check Pods Manifest.lock */,
 				27226F44282F246D00DC02FD /* Sources */,
 				27226F45282F246D00DC02FD /* Frameworks */,
 				27226F46282F246D00DC02FD /* Resources */,
+				50392A12CFE2100EEF7C01D0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,6 +211,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		50392A12CFE2100EEF7C01D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlmightyHeroApp/Pods-AlmightyHeroApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlmightyHeroApp/Pods-AlmightyHeroApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlmightyHeroApp/Pods-AlmightyHeroApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D25A6BEDFA352786A0D02FD8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlmightyHeroApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		27226F44282F246D00DC02FD /* Sources */ = {
@@ -338,6 +407,7 @@
 		};
 		27226F5D282F246F00DC02FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B449F4777526AB3C12CE37BA /* Pods-AlmightyHeroApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -366,6 +436,7 @@
 		};
 		27226F5E282F246F00DC02FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D22E36656C399551F60E316F /* Pods-AlmightyHeroApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
