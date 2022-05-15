@@ -10,10 +10,15 @@ import FSCalendar
 
 class CalendarViewController: UIViewController {
     @IBOutlet weak var calendarView: FSCalendar!
+    @IBOutlet weak var addButton: UIButton!
+    @IBAction func addButton(_ sender: UIButton) {
+        transitionToEditorView()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCalendar()
+        configureButton()
     }
 
     func configureCalendar() {
@@ -36,5 +41,19 @@ class CalendarViewController: UIViewController {
         // 土日の色を変更
         calendarView.calendarWeekdayView.weekdayLabels[0].textColor = .red
         calendarView.calendarWeekdayView.weekdayLabels[6].textColor = .blue
+    }
+
+    func configureButton() {
+        // ボタンを角丸にする
+        addButton.layer.cornerRadius = addButton.bounds.width / 2
+    }
+
+    // トレーニング入力画面に遷移
+    func transitionToEditorView() {
+        let storyboard = UIStoryboard(name: "EditorViewController", bundle: nil)
+        guard let editorViewController =
+                storyboard.instantiateInitialViewController() as?
+                EditorViewController else { return }
+        present(editorViewController, animated: true)
     }
 }

@@ -51,24 +51,43 @@
                                 <rect key="frame" x="20" y="144" width="374" height="569"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlK-bS-OgE">
+                                <rect key="frame" x="334" y="733" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="38F-gG-Iu6"/>
+                                    <constraint firstAttribute="width" constant="50" id="U9U-ys-dqE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="＋">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButton:" destination="fPC-1q-0mc" eventType="touchUpInside" id="ruE-Um-AAY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HDe-Mc-eBn"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="LVc-5y-PpL" firstAttribute="leading" secondItem="HDe-Mc-eBn" secondAttribute="leading" constant="20" id="7lF-h6-Mhm"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="hlK-bS-OgE" secondAttribute="bottom" constant="30" id="DXa-8s-Y6B"/>
                             <constraint firstItem="HDe-Mc-eBn" firstAttribute="trailing" secondItem="LVc-5y-PpL" secondAttribute="trailing" constant="20" id="KJn-up-fHC"/>
                             <constraint firstItem="LVc-5y-PpL" firstAttribute="top" secondItem="HDe-Mc-eBn" secondAttribute="top" constant="100" id="Q2d-dF-w1E"/>
                             <constraint firstItem="HDe-Mc-eBn" firstAttribute="bottom" secondItem="LVc-5y-PpL" secondAttribute="bottom" constant="100" id="QlK-1Q-Ow8"/>
+                            <constraint firstItem="HDe-Mc-eBn" firstAttribute="trailing" secondItem="hlK-bS-OgE" secondAttribute="trailing" constant="30" id="i5k-Io-QQS"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="gYz-Wn-pye"/>
                     <connections>
+                        <outlet property="addButton" destination="hlK-bS-OgE" id="nbb-ew-IFI"/>
                         <outlet property="calendarView" destination="LVc-5y-PpL" id="rDw-5c-735"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ed3-fG-s3K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="368" y="-542"/>
+            <point key="canvasLocation" x="366.66666666666669" y="-542.41071428571422"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="tq8-Ps-tZW">
@@ -93,6 +112,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
