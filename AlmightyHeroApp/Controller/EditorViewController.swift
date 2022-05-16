@@ -44,7 +44,7 @@ class EditorViewController: UIViewController {
 
     var toolBar: UIToolbar {
         // キーボードに閉じるボタンを作成
-        let toolBarRect = CGRect(x: 0, y: 0, width: view.frame.size.width, height: 35)
+        let toolBarRect = CGRect(x: 0, y: 0, width: view.frame.size.width, height: 45)
         let toolBar = UIToolbar(frame: toolBarRect)
         let space = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: self, action: nil)
         let done = UIBarButtonItem(title: "閉じる", style: .done, target: self, action: #selector(didTapDone))

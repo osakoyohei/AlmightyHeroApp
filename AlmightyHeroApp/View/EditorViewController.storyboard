@@ -72,7 +72,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ke4-9x-oPz">
-                                <rect key="frame" x="40" y="722" width="334" height="40"/>
+                                <rect key="frame" x="40" y="589" width="334" height="40"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="54u-il-rZm"/>
@@ -94,7 +94,6 @@
                             <constraint firstItem="oNs-ij-IlJ" firstAttribute="top" secondItem="FgB-wo-uYv" secondAttribute="bottom" constant="20" id="4xp-Xs-TGa"/>
                             <constraint firstItem="15B-tj-nRW" firstAttribute="trailing" secondItem="b5k-WF-a4f" secondAttribute="trailing" constant="40" id="5ZE-aS-Gzb"/>
                             <constraint firstItem="RAo-Er-MVF" firstAttribute="leading" secondItem="kgY-hg-riZ" secondAttribute="leading" id="73X-gh-jZX"/>
-                            <constraint firstItem="15B-tj-nRW" firstAttribute="bottom" secondItem="Ke4-9x-oPz" secondAttribute="bottom" constant="100" id="F07-vP-F8N"/>
                             <constraint firstItem="15B-tj-nRW" firstAttribute="trailing" secondItem="STK-ca-tE1" secondAttribute="trailing" constant="40" id="FfE-vw-1xC"/>
                             <constraint firstItem="Ahr-2k-Zkb" firstAttribute="leading" secondItem="kgY-hg-riZ" secondAttribute="leading" id="FvD-PT-utP"/>
                             <constraint firstItem="15B-tj-nRW" firstAttribute="trailing" secondItem="itL-KF-jJE" secondAttribute="trailing" constant="40" id="FvJ-Q8-rBd"/>
@@ -112,6 +111,7 @@
                             <constraint firstItem="STK-ca-tE1" firstAttribute="leading" secondItem="kgY-hg-riZ" secondAttribute="leading" id="h2s-IP-WYV"/>
                             <constraint firstItem="tbb-C9-Rdz" firstAttribute="leading" secondItem="kgY-hg-riZ" secondAttribute="leading" id="hzF-yd-F33"/>
                             <constraint firstItem="r0h-kw-on9" firstAttribute="leading" secondItem="kgY-hg-riZ" secondAttribute="leading" id="i8g-uG-9yu"/>
+                            <constraint firstItem="Ke4-9x-oPz" firstAttribute="top" secondItem="itL-KF-jJE" secondAttribute="bottom" constant="50" id="kSi-9x-LGd"/>
                             <constraint firstItem="15B-tj-nRW" firstAttribute="trailing" secondItem="RAo-Er-MVF" secondAttribute="trailing" constant="40" id="qQq-Uh-dMq"/>
                             <constraint firstItem="tbb-C9-Rdz" firstAttribute="top" secondItem="STK-ca-tE1" secondAttribute="bottom" constant="20" id="rde-RL-1hS"/>
                             <constraint firstItem="FgB-wo-uYv" firstAttribute="leading" secondItem="kgY-hg-riZ" secondAttribute="leading" id="tOc-zs-ebq"/>
@@ -130,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0V-Oi-24d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="86.956521739130437" y="-50.223214285714285"/>
+            <point key="canvasLocation" x="-193" y="-54"/>
         </scene>
     </scenes>
     <resources>
