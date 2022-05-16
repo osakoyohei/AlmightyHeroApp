@@ -85,6 +85,20 @@
                                     <action selector="saveButton:" destination="kwj-dh-gwo" eventType="touchUpInside" id="7NL-TG-mJc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4of-Fe-dV4">
+                                <rect key="frame" x="40" y="658" width="334" height="40"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="27e-BT-a3i"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="削除">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteButton:" destination="kwj-dh-gwo" eventType="touchUpInside" id="NuS-tO-I5L"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="15B-tj-nRW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -93,6 +107,7 @@
                             <constraint firstItem="b5k-WF-a4f" firstAttribute="leading" secondItem="kgY-hg-riZ" secondAttribute="leading" id="4eb-1K-Bhn"/>
                             <constraint firstItem="oNs-ij-IlJ" firstAttribute="top" secondItem="FgB-wo-uYv" secondAttribute="bottom" constant="20" id="4xp-Xs-TGa"/>
                             <constraint firstItem="15B-tj-nRW" firstAttribute="trailing" secondItem="b5k-WF-a4f" secondAttribute="trailing" constant="40" id="5ZE-aS-Gzb"/>
+                            <constraint firstItem="15B-tj-nRW" firstAttribute="trailing" secondItem="4of-Fe-dV4" secondAttribute="trailing" constant="40" id="5dK-gV-cN9"/>
                             <constraint firstItem="RAo-Er-MVF" firstAttribute="leading" secondItem="kgY-hg-riZ" secondAttribute="leading" id="73X-gh-jZX"/>
                             <constraint firstItem="15B-tj-nRW" firstAttribute="trailing" secondItem="STK-ca-tE1" secondAttribute="trailing" constant="40" id="FfE-vw-1xC"/>
                             <constraint firstItem="Ahr-2k-Zkb" firstAttribute="leading" secondItem="kgY-hg-riZ" secondAttribute="leading" id="FvD-PT-utP"/>
@@ -106,12 +121,14 @@
                             <constraint firstItem="FgB-wo-uYv" firstAttribute="top" secondItem="RAo-Er-MVF" secondAttribute="bottom" constant="20" id="Uys-TP-3G1"/>
                             <constraint firstItem="STK-ca-tE1" firstAttribute="top" secondItem="kgY-hg-riZ" secondAttribute="bottom" constant="20" id="Ytr-Uy-YRV"/>
                             <constraint firstItem="kgY-hg-riZ" firstAttribute="leading" secondItem="15B-tj-nRW" secondAttribute="leading" constant="40" id="ZAt-7k-LO2"/>
+                            <constraint firstItem="4of-Fe-dV4" firstAttribute="leading" secondItem="15B-tj-nRW" secondAttribute="leading" constant="40" id="ZOX-ij-QVb"/>
                             <constraint firstItem="b5k-WF-a4f" firstAttribute="top" secondItem="tbb-C9-Rdz" secondAttribute="bottom" constant="20" id="dab-q4-HHR"/>
                             <constraint firstItem="Ahr-2k-Zkb" firstAttribute="top" secondItem="oNs-ij-IlJ" secondAttribute="bottom" constant="20" id="duL-zo-dIL"/>
                             <constraint firstItem="STK-ca-tE1" firstAttribute="leading" secondItem="kgY-hg-riZ" secondAttribute="leading" id="h2s-IP-WYV"/>
                             <constraint firstItem="tbb-C9-Rdz" firstAttribute="leading" secondItem="kgY-hg-riZ" secondAttribute="leading" id="hzF-yd-F33"/>
                             <constraint firstItem="r0h-kw-on9" firstAttribute="leading" secondItem="kgY-hg-riZ" secondAttribute="leading" id="i8g-uG-9yu"/>
                             <constraint firstItem="Ke4-9x-oPz" firstAttribute="top" secondItem="itL-KF-jJE" secondAttribute="bottom" constant="50" id="kSi-9x-LGd"/>
+                            <constraint firstItem="4of-Fe-dV4" firstAttribute="top" secondItem="Ke4-9x-oPz" secondAttribute="bottom" constant="29" id="q3c-Yu-q61"/>
                             <constraint firstItem="15B-tj-nRW" firstAttribute="trailing" secondItem="RAo-Er-MVF" secondAttribute="trailing" constant="40" id="qQq-Uh-dMq"/>
                             <constraint firstItem="tbb-C9-Rdz" firstAttribute="top" secondItem="STK-ca-tE1" secondAttribute="bottom" constant="20" id="rde-RL-1hS"/>
                             <constraint firstItem="FgB-wo-uYv" firstAttribute="leading" secondItem="kgY-hg-riZ" secondAttribute="leading" id="tOc-zs-ebq"/>
@@ -120,6 +137,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="deleteButton" destination="4of-Fe-dV4" id="a1K-sb-va4"/>
                         <outlet property="inputDateTextField" destination="STK-ca-tE1" id="Pr5-Fe-GAT"/>
                         <outlet property="inputPushUpTextField" destination="b5k-WF-a4f" id="r6B-vo-hAu"/>
                         <outlet property="inputRunningTextField" destination="itL-KF-jJE" id="bqp-Xn-Uzx"/>
@@ -130,12 +148,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0V-Oi-24d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-193" y="-54"/>
+            <point key="canvasLocation" x="-194.20289855072465" y="-54.241071428571423"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
