@@ -20,6 +20,7 @@
 		275F3B252830CA1C00E810AE /* TrainingRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275F3B242830CA1C00E810AE /* TrainingRecord.swift */; };
 		27C5563F2830B653006059F7 /* EditorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C5563E2830B653006059F7 /* EditorViewController.storyboard */; };
 		27C556412830BD70006059F7 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C556402830BD70006059F7 /* EditorViewController.swift */; };
+		27ED75A72831DE6600607C8E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED75A62831DE6600607C8E /* Date+Extension.swift */; };
 		8188020102999BF6F55EB50E /* Pods_AlmightyHeroApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF5528F857AF1A39E49E527 /* Pods_AlmightyHeroApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		275F3B242830CA1C00E810AE /* TrainingRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecord.swift; sourceTree = "<group>"; };
 		27C5563E2830B653006059F7 /* EditorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditorViewController.storyboard; sourceTree = "<group>"; };
 		27C556402830BD70006059F7 /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
+		27ED75A62831DE6600607C8E /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		B449F4777526AB3C12CE37BA /* Pods-AlmightyHeroApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlmightyHeroApp.debug.xcconfig"; path = "Target Support Files/Pods-AlmightyHeroApp/Pods-AlmightyHeroApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D22E36656C399551F60E316F /* Pods-AlmightyHeroApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlmightyHeroApp.release.xcconfig"; path = "Target Support Files/Pods-AlmightyHeroApp/Pods-AlmightyHeroApp.release.xcconfig"; sourceTree = "<group>"; };
 		FEF5528F857AF1A39E49E527 /* Pods_AlmightyHeroApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlmightyHeroApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,7 @@
 		27226F70282F30A400DC02FD /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				27ED75A62831DE6600607C8E /* Date+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				27226F72282F31BC00DC02FD /* MainTabBarController.swift in Sources */,
 				27226F67282F2CFE00DC02FD /* GraphViewController.swift in Sources */,
 				27C556412830BD70006059F7 /* EditorViewController.swift in Sources */,
+				27ED75A72831DE6600607C8E /* Date+Extension.swift in Sources */,
 				27226F4E282F246D00DC02FD /* SceneDelegate.swift in Sources */,
 				27226F69282F2D1D00DC02FD /* HeroClassViewController.swift in Sources */,
 				27226F7B282F33B400DC02FD /* CalendarViewController.swift in Sources */,
