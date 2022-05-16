@@ -8,6 +8,10 @@
 import UIKit
 import RealmSwift
 
+protocol EditorViewControllerDelegate {
+    func recordUpdate()
+}
+
 class EditorViewController: UIViewController {
     @IBOutlet weak var inputDateTextField: UITextField!
     @IBOutlet weak var inputPushUpTextField: UITextField!
@@ -20,15 +24,14 @@ class EditorViewController: UIViewController {
     }
     
     var record = TrainingRecord()
+    var delegate: EditorViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureDateTextField()
-        configureTextField()
+        configureTrainingTextField()
         configureSaveButton()
-        let realm = try! Realm()
-        let firstRecord = realm.objects(TrainingRecord.self).first
-        print("👀firstRecord: \(String(describing: firstRecord))")
+        print("👀record: \(record)")
     }
 
     @objc func didTapDone() {
@@ -63,7 +66,7 @@ class EditorViewController: UIViewController {
         datePicker.timeZone = .current
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.locale = Locale(identifier: "ja-JP")
-        datePicker.date = Date()
+        datePicker.date = record.date
         datePicker.addTarget(self, action: #selector(didChangeDate), for: .valueChanged)
         return datePicker
     }
@@ -80,15 +83,19 @@ class EditorViewController: UIViewController {
     func configureDateTextField() {
         inputDateTextField.inputView = datePicker
         inputDateTextField.inputAccessoryView = toolBar
-        inputDateTextField.text = dateFormatter.string(from: Date())
+        inputDateTextField.text = dateFormatter.string(from: record.date)
     }
 
     // 腕立て伏せ、上体起こし、スクワット、ランニングのテキストフィールドの設定
-    func configureTextField() {
+    func configureTrainingTextField() {
         inputPushUpTextField.inputAccessoryView = toolBar
         inputSitUpTextField.inputAccessoryView = toolBar
         inputSquatTextField.inputAccessoryView = toolBar
         inputRunningTextField.inputAccessoryView = toolBar
+        inputPushUpTextField.text = String(record.pushUp)
+        inputSitUpTextField.text = String(record.sitUp)
+        inputSquatTextField.text = String(record.squat)
+        inputRunningTextField.text = String(record.running)
     }
 
     // トレーニング保存ボタンの設定
@@ -123,6 +130,7 @@ class EditorViewController: UIViewController {
             }
             realm.add(record)
         }
+        delegate?.recordUpdate()
         dismiss(animated: true)
     }
 }
