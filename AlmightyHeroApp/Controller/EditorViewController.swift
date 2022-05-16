@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SwiftUI
+import RealmSwift
 
 class EditorViewController: UIViewController {
     @IBOutlet weak var inputDateTextField: UITextField!
@@ -14,11 +14,21 @@ class EditorViewController: UIViewController {
     @IBOutlet weak var inputSitUpTextField: UITextField!
     @IBOutlet weak var inputSquatTextField: UITextField!
     @IBOutlet weak var inputRunningTextField: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBAction func saveButton(_ sender: UIButton) {
+        saveRecord()
+    }
+    
+    var record = TrainingRecord()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureDateTextField()
         configureTextField()
+        configureSaveButton()
+        let realm = try! Realm()
+        let firstRecord = realm.objects(TrainingRecord.self).first
+        print("👀firstRecord: \(String(describing: firstRecord))")
     }
 
     @objc func didTapDone() {
@@ -79,5 +89,40 @@ class EditorViewController: UIViewController {
         inputSitUpTextField.inputAccessoryView = toolBar
         inputSquatTextField.inputAccessoryView = toolBar
         inputRunningTextField.inputAccessoryView = toolBar
+    }
+
+    // トレーニング保存ボタンの設定
+    func configureSaveButton() {
+        // ボタンを角丸にする
+        saveButton.layer.cornerRadius = 5
+    }
+
+    // トレーニングデータの保存
+    func saveRecord() {
+        let realm = try! Realm()
+        try! realm.write {
+            if let dateText = inputDateTextField.text,
+               let date = dateFormatter.date(from: dateText) {
+                record.date = date
+            }
+            if let pushUpText = inputPushUpTextField.text,
+               let pushUp = Int(pushUpText) {
+                record.pushUp = pushUp
+            }
+            if let sitUpText = inputSitUpTextField.text,
+               let sitUp = Int(sitUpText) {
+                record.sitUp = sitUp
+            }
+            if let squatText = inputSquatTextField.text,
+               let squat = Int(squatText) {
+                record.squat = squat
+            }
+            if let runningText = inputRunningTextField.text,
+               let running = Double(runningText) {
+                record.running = running
+            }
+            realm.add(record)
+        }
+        dismiss(animated: true)
     }
 }
