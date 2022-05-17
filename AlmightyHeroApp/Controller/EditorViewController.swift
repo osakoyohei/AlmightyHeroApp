@@ -22,6 +22,10 @@ class EditorViewController: UIViewController {
     @IBAction func saveButton(_ sender: UIButton) {
         saveRecord()
     }
+    @IBOutlet weak var deleteButton: UIButton!
+    @IBAction func deleteButton(_ sender: UIButton) {
+        deleteRecord()
+    }
     
     var record = TrainingRecord()
     var delegate: EditorViewControllerDelegate?
@@ -31,6 +35,7 @@ class EditorViewController: UIViewController {
         configureDateTextField()
         configureTrainingTextField()
         configureSaveButton()
+        configureDeleteButton()
         print("👀record: \(record)")
     }
 
@@ -44,7 +49,7 @@ class EditorViewController: UIViewController {
 
     var toolBar: UIToolbar {
         // キーボードに閉じるボタンを作成
-        let toolBarRect = CGRect(x: 0, y: 0, width: view.frame.size.width, height: 35)
+        let toolBarRect = CGRect(x: 0, y: 0, width: view.frame.size.width, height: 45)
         let toolBar = UIToolbar(frame: toolBarRect)
         let space = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: self, action: nil)
         let done = UIBarButtonItem(title: "閉じる", style: .done, target: self, action: #selector(didTapDone))
@@ -132,5 +137,27 @@ class EditorViewController: UIViewController {
         }
         delegate?.recordUpdate()
         dismiss(animated: true)
+    }
+
+    // トレーニング削除ボタンの設定
+    func configureDeleteButton() {
+        // ボタンを角丸にする
+        deleteButton.layer.cornerRadius = 5
+    }
+
+    // トレーニングデータの削除
+    func deleteRecord() {
+        let calendar = Calendar(identifier: .gregorian)
+        let startOfDate = calendar.date(bySettingHour: 0, minute: 0, second: 0, of: record.date)!
+        let endOfDate = calendar.date(bySettingHour: 23, minute: 59, second: 59, of: record.date)!
+        let realm = try! Realm()
+        let recordList = Array(realm.objects(TrainingRecord.self).filter("date BETWEEN {%@, %@}", startOfDate, endOfDate))
+        recordList.forEach({ record in
+            try! realm.write {
+                realm.delete(record)
+            }
+            delegate?.recordUpdate()
+            dismiss(animated: true)
+        })
     }
 }
