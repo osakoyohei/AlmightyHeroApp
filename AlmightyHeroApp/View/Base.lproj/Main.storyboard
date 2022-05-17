@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--ランキング-->
         <scene sceneID="nlJ-9c-QvM">
             <objects>
                 <viewController id="fCM-Oy-10Z" customClass="HeroClassViewController" customModule="AlmightyHeroApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,14 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="LHT-CQ-FND"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="xNy-8C-YfM"/>
+                    <tabBarItem key="tabBarItem" title="ランキング" image="TrophyIcon" id="xNy-8C-YfM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOP-DW-wwo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1209" y="-239"/>
         </scene>
-        <!--Item 2-->
+        <!--グラフ-->
         <scene sceneID="yqv-kZ-Q6U">
             <objects>
                 <viewController id="HJD-v5-JQV" customClass="GraphViewController" customModule="AlmightyHeroApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,13 +34,13 @@
                         <viewLayoutGuide key="safeArea" id="L5g-Qx-Xlm"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="ElF-pe-Vg6"/>
+                    <tabBarItem key="tabBarItem" title="グラフ" image="graphIcon" id="ElF-pe-Vg6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ssY-SQ-W58" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="367" y="105"/>
         </scene>
-        <!--Item 1-->
+        <!--カレンダー-->
         <scene sceneID="d4w-f4-emj">
             <objects>
                 <viewController id="fPC-1q-0mc" customClass="CalendarViewController" customModule="AlmightyHeroApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -79,7 +80,7 @@
                             <constraint firstItem="HDe-Mc-eBn" firstAttribute="trailing" secondItem="hlK-bS-OgE" secondAttribute="trailing" constant="30" id="i5k-Io-QQS"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="gYz-Wn-pye"/>
+                    <tabBarItem key="tabBarItem" title="カレンダー" image="calendarIcon" id="gYz-Wn-pye"/>
                     <connections>
                         <outlet property="addButton" destination="hlK-bS-OgE" id="nbb-ew-IFI"/>
                         <outlet property="calendarView" destination="LVc-5y-PpL" id="rDw-5c-735"/>
@@ -110,6 +111,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="TrophyIcon" width="25" height="25"/>
+        <image name="calendarIcon" width="25" height="25"/>
+        <image name="graphIcon" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
