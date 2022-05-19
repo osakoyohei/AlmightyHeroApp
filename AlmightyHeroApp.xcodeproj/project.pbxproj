@@ -17,6 +17,7 @@
 		27226F72282F31BC00DC02FD /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27226F71282F31BC00DC02FD /* MainTabBarController.swift */; };
 		27226F76282F335900DC02FD /* ViewController.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27226F75282F335900DC02FD /* ViewController.swift.swift */; };
 		27226F7B282F33B400DC02FD /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27226F7A282F33B400DC02FD /* CalendarViewController.swift */; };
+		2749A3302835EB6800B0A055 /* AlmightyHero.png in Resources */ = {isa = PBXBuildFile; fileRef = 2749A32F2835EB6800B0A055 /* AlmightyHero.png */; };
 		275F3B252830CA1C00E810AE /* TrainingRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275F3B242830CA1C00E810AE /* TrainingRecord.swift */; };
 		27C5563F2830B653006059F7 /* EditorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C5563E2830B653006059F7 /* EditorViewController.storyboard */; };
 		27C556412830BD70006059F7 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C556402830BD70006059F7 /* EditorViewController.swift */; };
@@ -37,6 +38,7 @@
 		27226F71282F31BC00DC02FD /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		27226F75282F335900DC02FD /* ViewController.swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift.swift; sourceTree = "<group>"; };
 		27226F7A282F33B400DC02FD /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		2749A32F2835EB6800B0A055 /* AlmightyHero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AlmightyHero.png; sourceTree = "<group>"; };
 		275F3B242830CA1C00E810AE /* TrainingRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecord.swift; sourceTree = "<group>"; };
 		27C5563E2830B653006059F7 /* EditorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditorViewController.storyboard; sourceTree = "<group>"; };
 		27C556402830BD70006059F7 /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				27226F6B282F306200DC02FD /* Controller */,
 				27226F6A282F305A00DC02FD /* View */,
 				27226F54282F246F00DC02FD /* Assets.xcassets */,
+				2749A32F2835EB6800B0A055 /* AlmightyHero.png */,
 				27226F59282F246F00DC02FD /* Info.plist */,
 			);
 			path = AlmightyHeroApp;
@@ -219,6 +222,7 @@
 				27226F58282F246F00DC02FD /* LaunchScreen.storyboard in Resources */,
 				27226F55282F246F00DC02FD /* Assets.xcassets in Resources */,
 				27226F53282F246D00DC02FD /* Main.storyboard in Resources */,
+				2749A3302835EB6800B0A055 /* AlmightyHero.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
