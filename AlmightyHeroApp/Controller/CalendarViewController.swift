@@ -88,7 +88,7 @@ extension CalendarViewController: FSCalendarDataSource {
 
 extension CalendarViewController: FSCalendarDelegate {
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        calendar.deselect(date)
+        calendar.allowsMultipleSelection = false
         guard let record = recordList.first(where: { $0.date.zeroclock == date.zeroclock }) else { return }
         transitionToEditorView(with: record)
     }
