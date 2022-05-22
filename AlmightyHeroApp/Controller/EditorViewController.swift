@@ -52,7 +52,7 @@ class EditorViewController: UIViewController {
         let toolBarRect = CGRect(x: 0, y: 0, width: view.frame.size.width, height: 45)
         let toolBar = UIToolbar(frame: toolBarRect)
         let space = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: self, action: nil)
-        let done = UIBarButtonItem(title: "閉じる", style: .done, target: self, action: #selector(didTapDone))
+        let done = UIBarButtonItem(title: "完了", style: .done, target: self, action: #selector(didTapDone))
         toolBar.items = [space, done]
         // 他の場所をタップした時にキーボードが閉じるようにする
         let tapGR: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
