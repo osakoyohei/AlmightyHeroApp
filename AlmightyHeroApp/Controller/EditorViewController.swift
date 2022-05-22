@@ -36,33 +36,32 @@ class EditorViewController: UIViewController {
         configureTrainingTextField()
         configureSaveButton()
         configureDeleteButton()
-        print("👀record: \(record)")
+        closeKeyboard()
+    }
+
+    var toolBar: UIToolbar {
+        // キーボードに完了ボタンを作成
+        let toolBarRect = CGRect(x: 0, y: 0, width: view.frame.size.width, height: 45)
+        let toolBar = UIToolbar(frame: toolBarRect)
+        let space = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: self, action: nil)
+        let done = UIBarButtonItem(title: "完了", style: .done, target: self, action: #selector(didTapDone))
+        toolBar.items = [space, done]
+        return toolBar
     }
 
     @objc func didTapDone() {
         view.endEditing(true)
     }
 
-    @objc func dismissKeyboard() {
-        self.view.endEditing(true)
-    }
-
-    var toolBar: UIToolbar {
-        // キーボードに閉じるボタンを作成
-        let toolBarRect = CGRect(x: 0, y: 0, width: view.frame.size.width, height: 45)
-        let toolBar = UIToolbar(frame: toolBarRect)
-        let space = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: self, action: nil)
-        let done = UIBarButtonItem(title: "完了", style: .done, target: self, action: #selector(didTapDone))
-        toolBar.items = [space, done]
+    func closeKeyboard() {
         // 他の場所をタップした時にキーボードが閉じるようにする
         let tapGR: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tapGR.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tapGR)
-        return toolBar
     }
 
-    @objc func didChangeDate(picker: UIDatePicker) {
-        inputDateTextField.text = dateFormatter.string(from: picker.date)
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
     }
 
     var datePicker: UIDatePicker {
@@ -74,6 +73,10 @@ class EditorViewController: UIViewController {
         datePicker.date = record.date
         datePicker.addTarget(self, action: #selector(didChangeDate), for: .valueChanged)
         return datePicker
+    }
+
+    @objc func didChangeDate(picker: UIDatePicker) {
+        inputDateTextField.text = dateFormatter.string(from: picker.date)
     }
 
     var dateFormatter: DateFormatter {
