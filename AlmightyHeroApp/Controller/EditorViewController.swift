@@ -37,6 +37,46 @@ class EditorViewController: UIViewController {
         configureSaveButton()
         configureDeleteButton()
         closeKeyboard()
+        // キーボードの表示の通知を受け取る
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        // キーボードの非表示の通知を受け取る
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)),name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    // キーボードが表示された時
+    @objc private func keyboardWillShow(sender: NSNotification) {
+        guard let keyboardSize = (sender.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+                return
+            }
+        let noneMoveHeight = view.frame.origin.y + view.frame.size.height - keyboardSize.height
+        if noneMoveHeight <= inputRunningTextField.frame.midY {
+            if inputRunningTextField.isFirstResponder {
+                guard let userInfo = sender.userInfo else { return }
+                let duration: Float = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as! NSNumber).floatValue
+                UIView.animate(withDuration: TimeInterval(duration), animations: { () -> Void in
+                    let transform = CGAffineTransform(translationX: 0, y: -200)
+                    self.view.transform = transform
+                })
+            } else if inputSquatTextField.isFirstResponder {
+                guard let userInfo = sender.userInfo else { return }
+                let duration: Float = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as! NSNumber).floatValue
+                UIView.animate(withDuration: TimeInterval(duration), animations: { () -> Void in
+                    let transform = CGAffineTransform(translationX: 0, y: -150)
+                    self.view.transform = transform
+                })
+            }
+        } else {
+            print("キーボードを動かす必要なし")
+        }
+    }
+
+    // キーボードが閉じられた時
+    @objc private func keyboardWillHide(sender: NSNotification) {
+        guard let userInfo = sender.userInfo else { return }
+        let duration: Float = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as! NSNumber).floatValue
+        UIView.animate(withDuration: TimeInterval(duration), animations: { () -> Void in
+            self.view.transform = CGAffineTransform.identity
+        })
     }
 
     var toolBar: UIToolbar {
