@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,71 +22,221 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOP-DW-wwo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1209" y="-239"/>
+            <point key="canvasLocation" x="367" y="488"/>
         </scene>
-        <!--グラフ-->
+        <!--トレーニングメニュー-->
         <scene sceneID="yqv-kZ-Q6U">
             <objects>
-                <viewController id="HJD-v5-JQV" customClass="GraphViewController" customModule="AlmightyHeroApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HJD-v5-JQV" customClass="GraphSelectionViewController" customModule="AlmightyHeroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lWF-ZU-xzy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8wG-kR-Mwc">
-                                <rect key="frame" x="0.0" y="144" width="414" height="569"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AYL-rB-sxz">
-                                    <size key="itemSize" width="150" height="154"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Q9w-6a-lJp">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="154"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="s6m-62-5N7">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="154"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tG-wo-EFU">
-                                                    <rect key="frame" x="49.5" y="65" width="51.5" height="24"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="1tG-wo-EFU" firstAttribute="centerX" secondItem="s6m-62-5N7" secondAttribute="centerX" id="hAm-zZ-Dk5"/>
-                                                <constraint firstItem="1tG-wo-EFU" firstAttribute="centerY" secondItem="s6m-62-5N7" secondAttribute="centerY" id="zhf-by-u3B"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="150" height="154"/>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="HJD-v5-JQV" id="Xdq-Jd-Htg"/>
-                                    <outlet property="delegate" destination="HJD-v5-JQV" id="Lah-RI-lFn"/>
-                                </connections>
-                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NCU-WH-Qvn">
+                                <rect key="frame" x="20" y="188" width="374" height="36"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yby-LF-yjM">
+                                        <rect key="frame" x="0.0" y="0.0" width="177" height="36"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="腕立て伏せ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Rph-fD-s3n" kind="show" id="Seo-bd-5xa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgK-ZA-Ptp">
+                                        <rect key="frame" x="197" y="0.0" width="177" height="36"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="上体起こし">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="phW-hN-6xf" kind="show" id="Gu0-eB-6AR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZNj-e7-CtT">
+                                <rect key="frame" x="20" y="244" width="374" height="36"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4M7-LV-G46">
+                                        <rect key="frame" x="0.0" y="0.0" width="177" height="36"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="スクワット">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="v7o-cl-IiT" kind="show" id="TrY-kP-Hy6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dk-Tb-ruw">
+                                        <rect key="frame" x="197" y="0.0" width="177" height="36"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="ランニング">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="hR4-bP-jZD" kind="show" id="NA8-Nm-M2w"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="L5g-Qx-Xlm"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="L5g-Qx-Xlm" firstAttribute="trailing" secondItem="8wG-kR-Mwc" secondAttribute="trailing" id="A5E-E3-aWj"/>
-                            <constraint firstItem="8wG-kR-Mwc" firstAttribute="top" secondItem="L5g-Qx-Xlm" secondAttribute="top" constant="100" id="TxF-Kt-nyp"/>
-                            <constraint firstItem="L5g-Qx-Xlm" firstAttribute="bottom" secondItem="8wG-kR-Mwc" secondAttribute="bottom" constant="100" id="p5b-TA-Ms5"/>
-                            <constraint firstItem="8wG-kR-Mwc" firstAttribute="leading" secondItem="L5g-Qx-Xlm" secondAttribute="leading" id="za6-eX-OcH"/>
+                            <constraint firstItem="L5g-Qx-Xlm" firstAttribute="trailing" secondItem="NCU-WH-Qvn" secondAttribute="trailing" constant="20" id="6vv-C1-GJV"/>
+                            <constraint firstItem="L5g-Qx-Xlm" firstAttribute="trailing" secondItem="ZNj-e7-CtT" secondAttribute="trailing" constant="20" id="81q-Aj-f6i"/>
+                            <constraint firstItem="NCU-WH-Qvn" firstAttribute="leading" secondItem="L5g-Qx-Xlm" secondAttribute="leading" constant="20" id="GKh-FH-hgJ"/>
+                            <constraint firstItem="NCU-WH-Qvn" firstAttribute="top" secondItem="L5g-Qx-Xlm" secondAttribute="top" constant="100" id="JWE-5n-30D"/>
+                            <constraint firstItem="ZNj-e7-CtT" firstAttribute="top" secondItem="NCU-WH-Qvn" secondAttribute="bottom" constant="20" id="MbH-UX-VrQ"/>
+                            <constraint firstItem="ZNj-e7-CtT" firstAttribute="leading" secondItem="L5g-Qx-Xlm" secondAttribute="leading" constant="20" id="PKO-kl-o8t"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="グラフ" image="graphIcon" id="ElF-pe-Vg6"/>
+                    <navigationItem key="navigationItem" title="トレーニングメニュー" id="zsH-5W-iUh"/>
                     <connections>
-                        <outlet property="collectionView" destination="8wG-kR-Mwc" id="PFU-cX-Ihn"/>
+                        <outlet property="pushUpButton" destination="yby-LF-yjM" id="Csz-mu-O0y"/>
+                        <outlet property="runningButton" destination="5dk-Tb-ruw" id="vCw-9n-TKW"/>
+                        <outlet property="sitUpButton" destination="xgK-ZA-Ptp" id="79k-0w-mNR"/>
+                        <outlet property="squatButton" destination="4M7-LV-G46" id="xYA-Jw-AIk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ssY-SQ-W58" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="365.21739130434787" y="144.64285714285714"/>
+            <point key="canvasLocation" x="1141" y="-239"/>
+        </scene>
+        <!--腕立て伏せ-->
+        <scene sceneID="jiy-MM-tQb">
+            <objects>
+                <viewController id="Rph-fD-s3n" customClass="PushUpGraphViewController" customModule="AlmightyHeroApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cMI-Xj-27o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dst-R9-y24" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="188" width="414" height="525"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZIZ-Aq-Urz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZIZ-Aq-Urz" firstAttribute="bottom" secondItem="Dst-R9-y24" secondAttribute="bottom" constant="100" id="Tfw-U3-hcg"/>
+                            <constraint firstItem="Dst-R9-y24" firstAttribute="top" secondItem="ZIZ-Aq-Urz" secondAttribute="top" constant="100" id="gFB-6V-tUE"/>
+                            <constraint firstItem="Dst-R9-y24" firstAttribute="trailing" secondItem="ZIZ-Aq-Urz" secondAttribute="trailing" id="lRl-gJ-NC0"/>
+                            <constraint firstItem="Dst-R9-y24" firstAttribute="leading" secondItem="ZIZ-Aq-Urz" secondAttribute="leading" id="oqS-UM-VgO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="腕立て伏せ" id="5ks-Ka-taK"/>
+                    <connections>
+                        <outlet property="barChartView" destination="Dst-R9-y24" id="V3o-Y6-ygH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6yF-d5-ghG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1831.8840579710147" y="-565.17857142857144"/>
+        </scene>
+        <!--上体起こし-->
+        <scene sceneID="96y-ge-g2r">
+            <objects>
+                <viewController id="phW-hN-6xf" customClass="SitUpGraphViewController" customModule="AlmightyHeroApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p18-3n-xoW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fzq-fC-0Vj" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="188" width="414" height="525"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RLB-cu-KfR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fzq-fC-0Vj" firstAttribute="trailing" secondItem="RLB-cu-KfR" secondAttribute="trailing" id="1V4-Jz-Zne"/>
+                            <constraint firstItem="Fzq-fC-0Vj" firstAttribute="leading" secondItem="RLB-cu-KfR" secondAttribute="leading" id="dRu-Wv-pmD"/>
+                            <constraint firstItem="RLB-cu-KfR" firstAttribute="bottom" secondItem="Fzq-fC-0Vj" secondAttribute="bottom" constant="100" id="pHu-P3-BRE"/>
+                            <constraint firstItem="Fzq-fC-0Vj" firstAttribute="top" secondItem="RLB-cu-KfR" secondAttribute="top" constant="100" id="wpq-kr-dEX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="上体起こし" id="Mgj-AS-ayC"/>
+                    <connections>
+                        <outlet property="barChartView" destination="Fzq-fC-0Vj" id="lbO-t2-gqx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eHT-PB-C6e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2513.04347826087" y="-565.17857142857144"/>
+        </scene>
+        <!--スクワット-->
+        <scene sceneID="3SJ-lZ-7FC">
+            <objects>
+                <viewController id="v7o-cl-IiT" customClass="SquatGraphViewController" customModule="AlmightyHeroApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n3s-42-y12">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZM-gG-8wo" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="188" width="414" height="525"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4FE-hA-pOy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4FE-hA-pOy" firstAttribute="bottom" secondItem="xZM-gG-8wo" secondAttribute="bottom" constant="100" id="1OS-Wx-lxL"/>
+                            <constraint firstItem="xZM-gG-8wo" firstAttribute="trailing" secondItem="4FE-hA-pOy" secondAttribute="trailing" id="Jfb-dc-le1"/>
+                            <constraint firstItem="xZM-gG-8wo" firstAttribute="top" secondItem="4FE-hA-pOy" secondAttribute="top" constant="100" id="bWj-E4-Ash"/>
+                            <constraint firstItem="xZM-gG-8wo" firstAttribute="leading" secondItem="4FE-hA-pOy" secondAttribute="leading" id="tXS-gU-b6p"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="スクワット" id="QPa-Iz-8MB"/>
+                    <connections>
+                        <outlet property="barChartView" destination="xZM-gG-8wo" id="dre-an-3YI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgH-wK-Y1O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1831.8840579710147" y="136.60714285714286"/>
+        </scene>
+        <!--ランニング-->
+        <scene sceneID="eKl-yo-a05">
+            <objects>
+                <viewController id="hR4-bP-jZD" customClass="RunningGraphViewController" customModule="AlmightyHeroApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zyQ-pM-Lef">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLx-QM-lVU" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="188" width="414" height="525"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rQB-mS-IEb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QLx-QM-lVU" firstAttribute="leading" secondItem="rQB-mS-IEb" secondAttribute="leading" id="3y0-S2-BpO"/>
+                            <constraint firstItem="QLx-QM-lVU" firstAttribute="trailing" secondItem="rQB-mS-IEb" secondAttribute="trailing" id="8qF-Z0-UZb"/>
+                            <constraint firstItem="rQB-mS-IEb" firstAttribute="bottom" secondItem="QLx-QM-lVU" secondAttribute="bottom" constant="100" id="Mpx-EG-ooP"/>
+                            <constraint firstItem="QLx-QM-lVU" firstAttribute="top" secondItem="rQB-mS-IEb" secondAttribute="top" constant="100" id="hfX-XX-ytF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ランニング" id="hKy-YY-2bk"/>
+                    <connections>
+                        <outlet property="barChartView" destination="QLx-QM-lVU" id="JEU-9q-7eF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZWp-ki-cZ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2511.594202898551" y="136.60714285714286"/>
         </scene>
         <!--カレンダー-->
         <scene sceneID="d4w-f4-emj">
@@ -137,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ed3-fG-s3K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="366.66666666666669" y="-542.41071428571422"/>
+            <point key="canvasLocation" x="367" y="-915"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="tq8-Ps-tZW">
@@ -150,13 +299,36 @@
                     </tabBar>
                     <connections>
                         <segue destination="fPC-1q-0mc" kind="relationship" relationship="viewControllers" id="4n0-bJ-Cg1"/>
-                        <segue destination="HJD-v5-JQV" kind="relationship" relationship="viewControllers" id="lhX-or-b5b"/>
+                        <segue destination="NSH-JC-z64" kind="relationship" relationship="viewControllers" id="lhX-or-b5b"/>
                         <segue destination="fCM-Oy-10Z" kind="relationship" relationship="viewControllers" id="4ap-rF-uN7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfc-hE-tRX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-521" y="-239"/>
+        </scene>
+        <!--グラフ-->
+        <scene sceneID="yvw-Mc-0Fg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NSH-JC-z64" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="グラフ" image="graphIcon" id="ElF-pe-Vg6"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DiR-L9-0v2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HJD-v5-JQV" kind="relationship" relationship="rootViewController" id="pAh-mv-Uwn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KqD-IF-bcG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="367" y="-239"/>
         </scene>
     </scenes>
     <resources>
@@ -165,6 +337,9 @@
         <image name="graphIcon" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
